@@ -1,7 +1,9 @@
 package hw_11.ex_1;
 
+import java.time.Instant;
+
 public class OneSecond implements Runnable {
-    public static int timeOfStart =1;
+    public static int timeOfStart = 1;
 
     @Override
     public void run() {
@@ -12,8 +14,9 @@ public class OneSecond implements Runnable {
                 e.printStackTrace();
             }
             System.out.println("Від запуску програми пройшло: " + timeOfStart);
+            System.out.println(Instant.now());
             timeOfStart++;
-            synchronized (OneSecond.class){
+            synchronized (OneSecond.class) {
                 OneSecond.class.notifyAll();
             }
         }
