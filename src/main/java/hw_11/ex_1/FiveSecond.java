@@ -12,10 +12,10 @@ public class FiveSecond implements Runnable {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                block();
                 System.out.println("Пройшло 5 секунд");
                 System.out.println(Instant.now());
             }
-            block();
         }
     }
 
