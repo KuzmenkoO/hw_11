@@ -1,7 +1,5 @@
 package hw_11.ex_1;
 
-import java.time.Instant;
-
 public class FiveSecond implements Runnable {
     @Override
     public void run() {
@@ -14,7 +12,6 @@ public class FiveSecond implements Runnable {
                 }
                 block();
                 System.out.println("Пройшло 5 секунд");
-                System.out.println(Instant.now());
             }
         }
     }
